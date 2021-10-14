@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM - Exemplo 03</title>
+        <meta charset="UF-8">
+    </head>
+    <body>
+        <div id="profissoes">
+
+        </div>
+        <script>
+            var p = document.createElement("p");
+            var node = document.createTextNode("Front-End Developer");
+            p.appendChild(node);
+
+            var div = document.getElementById("profissoes");
+            div.appendChild(p);
+
+        </script>
+    </body>
+</html>

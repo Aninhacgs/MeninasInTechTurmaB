@@ -1,0 +1,29 @@
+<!--
+    O código abaixo representa um exemplo para selecionar todos os nós filhos de um elemento e alterar seu conteúdo:
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM - Exemplo 02</title>
+        <meta charset="URF-8">
+    </head>
+    <body>
+        <div id="developer">
+            <p>Linguagem C</p>
+            <h3>Python</h3>
+            <p>C++</p>
+            <h2>C#</h2>
+            <p>Java</p>
+        </div>
+
+        <script>
+            var x = document.getElementById("developer");
+            var y = x.childNodes;
+            for(var i=0;i<y.length;i++){
+                y[i].innerHTML = "JavaScript";
+            }
+        </script>
+
+    </body>
+</html>

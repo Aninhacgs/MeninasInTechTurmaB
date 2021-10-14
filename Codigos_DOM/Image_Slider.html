@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Slider</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button onclick="prev()">Anterior</button>
+        <img id=slider src= "img/img01.jpg"/>
+        <button onclick="next()">Próximo</button>
+
+        <script>
+            var imagens = [
+                "img/img02.jpg",
+                "img/img03.jpg",
+                "img/img04.jpg"
+            ];
+
+            var num = 0;
+
+            function next(){
+                var slider = document.getElementById("slider");
+                num++;
+                if(num >= imagens.length){
+                    num = 0;
+                }
+                slider.src = imagens[num];
+            }
+
+            function prev(){
+                var slider = document.getElementById("slider");
+                num--;
+                if(num > 0){
+                    num = imagens.length-1;
+                }
+
+                slider.src = imagens[num];
+            }
+
+        </script>
+
+
+    </body>
+</html>

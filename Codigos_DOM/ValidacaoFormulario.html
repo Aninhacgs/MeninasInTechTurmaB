@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Validação de Formulário</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form onsubmit=" return validacao()" method="POST">
+            Número: <input type="number" name="numero1" id="numero1"/><br/>
+            Repetir: <input type="number" name="numero2" id="numero2"/><br/>
+            <input type="submit" value="Enviar"/>
+
+        </form>
+
+        <script>
+            function validacao(){
+                var x = document.getElementById("numero1").value;
+                var y = document.getElementById("numero2").value;
+                if(x == y){
+
+                    return alert("Os valores são iguais!");
+
+                }
+                else{
+                    return alert("Os valores são diferentes");
+                }
+
+            }
+        </script>
+    </body>
+</html>

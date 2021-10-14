@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animação</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+            #container{
+                width: 200px;
+                height: 200px;
+                background: green;
+                position: relative;
+            }
+            #box{
+                width: 50px;
+                height: 50px;
+                background: red;
+                position: absolute;
+            }
+        </style>
+
+        <div id="container">
+            <div id="box">
+
+            </div>
+        </div>
+
+        <script>
+            var pos = 0;
+            var box = document.getElementById("box");
+            var t = setInterval(move,10);
+
+            function move(){
+                if(pos >= 150){
+                    clearInterval(t);
+                }
+                else{
+                    pos += 1;
+                    box.style.left = pos + "px";
+                }
+            }
+
+        </script>
+
+    </body>
+    
+</html>

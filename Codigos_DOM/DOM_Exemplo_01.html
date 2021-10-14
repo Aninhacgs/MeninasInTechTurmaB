@@ -1,0 +1,26 @@
+<!-- 
+    o método getElementsByTagName retorna todos os elementos do nome da marca especificada como um array. 
+    O exemplo a seguir obtém todos os elementos de parágrafo da página e altera seu conteúdo.
+-->
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>DOM - Exemplo 01</title>
+        <meta charset = "utf-8">
+    </head>
+    <body>
+        <p>Hoje é Segunda-Feira</p>
+        <p>Hoje é Terça-Feira</p>
+        <p>Hoje é Quarta-Feira</p>
+        <h2>Hoje é Sexta-Feira</h2>
+        <h3>Hoje é Sábado</h3>
+        <h4>Hoje é Domingo</h4>
+        <script>
+            var x = document.getElementsByTagName("p");
+            for(var i=0; i<x.length;i++){
+                x[i].innerHTML = "Hoje é Quinta-Feira";
+            }
+        </script>
+    </body>
+</html>
